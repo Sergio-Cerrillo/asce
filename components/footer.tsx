@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Instagram, Cookie, Database, Scale } from "lucide-react"
 import Link from "next/link"
 
 
@@ -60,15 +60,15 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Normativa</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-blue-400" />
+                <Cookie className="h-4 w-4 text-blue-400" />
                 <Link href="/cookiesPage" className="text-slate-400 text-sm">Política de Cookies</Link>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-blue-400" />
+                <Database className="h-4 w-4 text-blue-400" />
                 <Link href="/proteccion-de-datos" className="text-slate-400 text-sm">Política de Protección de Datos</Link>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-blue-400" />
+                <Scale className="h-4 w-4 text-blue-400" />
                 <Link href="/aviso-legal" className="text-slate-400 text-sm">Aviso Legal</Link>
               </div>
             </div>
