@@ -82,7 +82,7 @@ export default function LaboralPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-800 to-blue-700 dark:from-white dark:via-purple-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
               Asesoría laboral para empresas y trabajadores
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed text-justify">
               Ofrecemos soluciones laborales integrales: gestión de nóminas, contratos, altas y bajas, y asesoramiento en normativa laboral vigente.
             </p>
           </motion.div>
@@ -109,7 +109,7 @@ export default function LaboralPage() {
                         <span className="text-purple-600 dark:text-purple-400 font-bold text-sm">{index + 1}</span>
                       </div>
                       <div>
-                        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">{benefit.titleKey}</p>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">{benefit.titleKey}</p>
                       </div>
                     </div>
                   ))}
@@ -144,7 +144,7 @@ export default function LaboralPage() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{service.titleKey}</h3>
-                          <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                          <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                             {service.descriptionKey}
                           </p>
                         </div>
@@ -156,31 +156,6 @@ export default function LaboralPage() {
             </div>
           </motion.div>
 
-
-
-          {/* Recent Updates */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="max-w-4xl mx-auto mb-16"
-          >
-            <Card className="border-l-4 border-l-orange-500 bg-orange-50 dark:bg-orange-900/20 border-0">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-3">
-                  <Calendar className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
-                      Últimas novedades laborales
-                    </h3>
-                    <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
-                      Consulta aquí las actualizaciones y cambios recientes en la normativa laboral.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
 
           {/* CTA Section */}
           <motion.div

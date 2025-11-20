@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Users, FileCheck, CreditCard, UserPlus, Calendar, Shield, ArrowRight } from "lucide-react"
+import { Users, FileCheck, CreditCard, UserPlus, Calendar, Shield, ArrowRight, BriefcaseBusiness, HandCoins, NotebookText, Building2, ChartArea, Landmark, FolderKanban, QrCode, BookA, LibraryBig, SearchCheck } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
@@ -11,46 +11,46 @@ const services = [
     {
         title: " Estudio de posibles subvenciones oficiales para el proyecto.",
         description: "Análisis de subvenciones disponibles para apoyar la creación de la empresa.",
-        icon: Users,
+        icon: HandCoins,
     },
     {
         title: "Asesoramiento de la forma jurídica más adecuada para la empresa.",
         description: "Orientación sobre la estructura legal más conveniente para el negocio.",
-        icon: UserPlus,
+        icon: Building2,
     },
     {
         title: "Realización de Estudio de Mercado.",
         description: "Investigación de mercado para identificar oportunidades y desafíos en el sector.",
-        icon: FileCheck,
+        icon: NotebookText,
     }
     ,
     {
         title: "Confección del Plan de Empresa.",
         description: "Elaboración de un plan detallado que defina la estrategia y objetivos del negocio.",
-        icon: FileCheck,
+        icon: ChartArea,
     }
     ,
     {
         title: "Gestiones con Entidades de Crédito para poder obtener la financiación del proyecto.",
         description: "Tramitación de la financiación necesaria para el inicio de las operaciones de la empresa.",
-        icon: FileCheck,
+        icon: Landmark,
     }
     ,
     {
         title: "Solicitud de Licencia Municipal de Actividad ante el Ayuntamiento, y la elaboración del Proyecto de Ingeniería visado por el Colegio Oficial.",
         description: "Gestión de la licencia municipal necesaria para operar legalmente, incluyendo la elaboración del proyecto técnico requerido.",
-        icon: FileCheck,
+        icon: FolderKanban,
     }
     ,
     {
         title: "Obtención del Registro Mercantil Central, de la certificación negativa del nombre para la sociedad.",
         description: "Registro de la empresa en el Registro Mercantil Central para asegurar la disponibilidad del nombre comercial.",
-        icon: FileCheck,
+        icon: SearchCheck,
     },
     {
         title: "Elaboración de los Estatutos Sociales y gestiones ante Notario.",
         description: "Redacción de los estatutos que regirán la empresa y realización de los trámites notariales necesarios.",
-        icon: FileCheck,
+        icon: LibraryBig,
     },
     {
         title: "Presentación del modelo 600 en la ATIB.",
@@ -60,12 +60,12 @@ const services = [
     {
         title: " Inscripción de la escritura de constitución en el Registro Mercantil.",
         description: "Registro oficial de la escritura de constitución de la empresa para su reconocimiento legal.",
-        icon: FileCheck,
+        icon: Landmark,
     },
     {
         title: " Obtención del Certificado Digital para la Sociedad y/o Autónomos.",
         description: "Obtención del certificado digital necesario para realizar trámites electrónicos y firmar documentos de forma segura.",
-        icon: FileCheck,
+        icon: QrCode,
     },
     {
         title: "Alta de autónomo en la Seguridad Social (Administradores).",
@@ -75,12 +75,12 @@ const services = [
     {
         title: "Obtención del CIF y presentación de la Declaración Censal de alta 036/037.",
         description: "Obtención del Código de Identificación Fiscal (CIF) y presentación de la declaración censal para el alta en el censo de empresarios.",
-        icon: FileCheck,
+        icon: CreditCard,
     },
     {
         title: "Comunicación apertura centro de trabajo a la Seguridad Social.",
         description: "Notificación a la Seguridad Social sobre la apertura del centro de trabajo para cumplir con las normativas laborales.",
-        icon: FileCheck,
+        icon: BookA,
     }
 ]
 
@@ -88,7 +88,8 @@ const services = [
 
 const benefits = [
     {
-        title: "De la mano",
+        title: "Apoyo y respaldo desde el minuto 0."
+        ,
         description: "Acompañamiento al cliente en todo el proceso relativo a la creación de su empresa.",
     }
 
@@ -109,7 +110,7 @@ export default function ProteccionDatosPage() {
                         className="text-center mb-16"
                     >
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 text-white mb-6">
-                            <Users className="h-10 w-10" />
+                            <BriefcaseBusiness className="h-10 w-10" />
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-800 to-blue-700 dark:from-white dark:via-purple-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
                             Creación de Empresas</h1>
@@ -141,7 +142,7 @@ export default function ProteccionDatosPage() {
                                             </div>
                                             <div>
                                                 <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{benefit.title}</h3>
-                                                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">
                                                     {benefit.description}
                                                 </p>
                                             </div>
@@ -178,7 +179,7 @@ export default function ProteccionDatosPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{service.title}</h3>
-                                                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                                                         {service.description}
                                                     </p>
                                                 </div>
@@ -200,8 +201,8 @@ export default function ProteccionDatosPage() {
                     >
                         <Card className="bg-gradient-to-r from-purple-600 to-blue-700 text-white border-0">
                             <CardContent className="p-12">
-                                <Users className="h-12 w-12 mx-auto mb-6 opacity-80" />
-                                <h2 className="text-3xl font-bold mb-4">Gestione su Empresa con Tranquilidad</h2>
+                                <BriefcaseBusiness className="h-12 w-12 mx-auto mb-6 opacity-80" />
+                                <h2 className="text-3xl font-bold mb-4">Gestiona tu Empresa con Tranquilidad</h2>
                                 <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
                                     Déjanos tus datos y tu consulta y te agendaremos una cita.
                                 </p>

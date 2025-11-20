@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Users, FileCheck, CreditCard, UserPlus, Calendar, Shield, ArrowRight } from "lucide-react"
+import { Users, FileCheck, CreditCard, UserPlus, Calendar, Shield, ArrowRight, Gavel, Speech, Handshake, ShieldCheck } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
@@ -11,17 +11,17 @@ const services = [
     {
         title: "Asesoramiento",
         description: "Asesoramiento general en materia jurídica.",
-        icon: Users,
+        icon: Speech,
     },
     {
         title: "Acuerdos",
         description: "Negociaciones extrajudiciales.",
-        icon: UserPlus,
+        icon: Handshake,
     },
     {
         title: "Defensa",
         description: "Representación en procesos judiciales.",
-        icon: FileCheck,
+        icon: ShieldCheck,
     }
 ]
 
@@ -61,7 +61,7 @@ export default function JuridicoPage() {
                         className="text-center mb-16"
                     >
                         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 text-white mb-6">
-                            <Users className="h-10 w-10" />
+                            <Gavel className="h-10 w-10" />
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-800 to-blue-700 dark:from-white dark:via-purple-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
                             Servicios Jurídicos</h1>
@@ -92,7 +92,7 @@ export default function JuridicoPage() {
                                                 <span className="text-purple-600 dark:text-purple-400 font-bold text-sm">{index + 1}</span>
                                             </div>
                                             <div>
-                                                <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{benefit.title}</h3>
+                                                <h3 className="font-semibold text-slate-900 dark:text-white mb-2 text-justify">{benefit.title}</h3>
 
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@ export default function JuridicoPage() {
                                                 </div>
                                                 <div>
                                                     <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{service.title}</h3>
-                                                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                                                         {service.description}
                                                     </p>
                                                 </div>
@@ -150,8 +150,8 @@ export default function JuridicoPage() {
                     >
                         <Card className="bg-gradient-to-r from-purple-600 to-blue-700 text-white border-0">
                             <CardContent className="p-12">
-                                <Users className="h-12 w-12 mx-auto mb-6 opacity-80" />
-                                <h2 className="text-3xl font-bold mb-4">Gestione sus Derechos con Tranquilidad</h2>
+                                <Gavel className="h-12 w-12 mx-auto mb-6 opacity-80" />
+                                <h2 className="text-3xl font-bold mb-4">Haz valer tus derechos y conoce tus obligaciones</h2>
                                 <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
                                     Déjanos tus datos y tu consulta y te agendaremos una cita.
                                 </p>

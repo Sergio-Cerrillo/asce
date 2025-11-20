@@ -108,9 +108,9 @@ export default function HomeClient({ services, newsItems, benefits }: {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative overflow-hidden pt-32 pb-20">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-slate-600/10 dark:from-blue-400/10 dark:to-slate-400/10" />
-                <div className="container mx-auto px-4 relative">
+            <section className="relative overflow-hidden pt-32 pb-20 ">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-slate-600/10 dark:from-blue-400/10 dark:to-slate-400/10 text-justify" />
+                <div className="container mx-auto px-4 relative text-justify">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function HomeClient({ services, newsItems, benefits }: {
                             transition={{ duration: 1, delay: 0.2 }}
                             className="mb-8"
                         >
-                            <img className="min-w-[400px] w-[800px] justify-self-center" src="/asce-logo.png" alt="ASCE logo" />
+                            <img className="min-w-[200px] w-[800px] justify-self-center" src="/asce-logo.png" alt="ASCE logo" />
                         </motion.div>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -139,7 +139,7 @@ export default function HomeClient({ services, newsItems, benefits }: {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="text-base md:text-lg text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-3xl mx-auto"
+                            className="text-base md:text-lg text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-3xl mx-auto text-justify"
                         >
                             Somos tu socio de confianza para el crecimiento y la gestión de tu empresa. Ofrecemos soluciones personalizadas en fiscalidad, laboral, contabilidad, jurídico y mucho más.
                         </motion.p>
@@ -167,8 +167,8 @@ export default function HomeClient({ services, newsItems, benefits }: {
                 </div>
             </section>
             {/* News Section */}
-            <section className="py-20 bg-gradient-to-r from-blue-50 to-slate-50 dark:from-slate-900 dark:to-slate-800">
-                <div className="container mx-auto px-4">
+            <section className="py-20 bg-gradient-to-r from-blue-50 to-slate-50 dark:from-slate-900 dark:to-slate-800 text-justify">
+                <div className="container mx-auto px-4 text-justify">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -217,8 +217,8 @@ export default function HomeClient({ services, newsItems, benefits }: {
                 </div>
             </section>
             {/* Services Grid */}
-            <section className="py-20 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
-                <div className="container mx-auto px-4">
+            <section className="py-20 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm text-justify">
+                <div className="container mx-auto px-4 text-justify">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +231,7 @@ export default function HomeClient({ services, newsItems, benefits }: {
                             Descubre todo lo que podemos hacer por tu empresa.
                         </p>
                     </motion.div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-justify">
                         {services.map((service, index) => (
                             <motion.div
                                 key={service.key}

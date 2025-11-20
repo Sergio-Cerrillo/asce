@@ -8,7 +8,7 @@ import Link from "next/link"
 export function Footer() {
 
   return (
-    <footer className="bg-slate-900 dark:bg-slate-950 text-white">
+    <footer className="bg-slate-900 dark:bg-slate-950 text-white text-justify">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -19,7 +19,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <img className="h-10 w-28 mb-3" src="/asce-logo.png" alt="ASCE Logo" />
-            <p className="text-slate-300 mb-4 leading-relaxed">Asesoría integral para empresas y autónomos en Palma de Mallorca. Soluciones personalizadas en fiscalidad, laboral, contabilidad, jurídico y más.</p>
+            <p className="text-slate-300 mb-4 leading-relaxed">Asesoría integral para empresas y autónomos. Soluciones personalizadas en fiscalidad, laboral, contabilidad, jurídico y más.</p>
             <div className="flex space-x-6 mt-4">
               {/* Facebook */}
               <a
@@ -86,7 +86,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-slate-400 text-sm">Palma, Mallorca</span>
+                <span className="text-slate-400 text-sm">c/Ginjoler 6, 1ºA, Palma de Mallorca</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-blue-400" />

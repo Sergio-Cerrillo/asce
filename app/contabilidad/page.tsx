@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calculator, CheckCircle, BookOpen, PieChart, ArrowRight } from "lucide-react"
+import { Calculator, CheckCircle, BookOpen, PieChart, ArrowRight, FileText, Users } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -41,9 +41,13 @@ export default function ContabilidadPage() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" className="mb-4 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">Contabilidad</Badge>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">Gestión contable profesional para tu empresa</h1>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">Ofrecemos servicios de contabilidad adaptados a las necesidades de tu negocio. Control, análisis y asesoramiento para que tomes las mejores decisiones financieras.</p>
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 text-white mb-6">
+            <Users className="h-10 w-10" />
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-800 to-blue-700 dark:from-white dark:via-purple-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
+            Gestión contable profesional para tu empresa</h1>
+
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-justify">Ofrecemos servicios de contabilidad adaptados a las necesidades de tu negocio. Control, análisis y asesoramiento para que tomes las mejores decisiones financieras.</p>
         </motion.div>
 
         {/* Objectives */}
@@ -64,15 +68,15 @@ export default function ContabilidadPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Transparencia y rigor</h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Garantizamos la máxima claridad y exactitud en la gestión de tu contabilidad.</p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">Garantizamos la máxima claridad y exactitud en la gestión de tu contabilidad.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Cumplimiento normativo</h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Nos aseguramos de que tu empresa cumpla con todas las obligaciones legales y fiscales.</p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">Nos aseguramos de que tu empresa cumpla con todas las obligaciones legales y fiscales.</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Optimización de recursos</h3>
-                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">Te ayudamos a optimizar la gestión financiera y administrativa de tu negocio.</p>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">Te ayudamos a optimizar la gestión financiera y administrativa de tu negocio.</p>
                 </div>
               </div>
             </CardContent>
@@ -100,8 +104,8 @@ export default function ContabilidadPage() {
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{service.titleKey}</h3>
-                        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{service.descriptionKey}</p>
+                        <h3 className="font-semibold text-slate-900 dark:text-white mb-2 text-justify">{service.titleKey}</h3>
+                        <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">{service.descriptionKey}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -135,7 +139,7 @@ export default function ContabilidadPage() {
                     >
                       {serviceKey.key + 1}
                     </Badge>
-                    <span className="text-slate-700 dark:text-slate-300">{serviceKey.titleKey}</span>
+                    <span className="text-slate-700 dark:text-slate-300 text-justify">{serviceKey.titleKey}</span>
                   </div>
                 ))}
               </div>

@@ -21,6 +21,7 @@ const taxFormCodes = [
   { code: "347", desc: "Declaración anual de operaciones con terceros" },
   { code: "600", desc: "Impuesto sobre Transmisiones Patrimoniales y Actos Jurídicos Documentados" },
   { code: "714", desc: "Impuesto sobre el Patrimonio" },
+  { code: "210-211", desc: "Impuesto sobre la Renta de no Residentes" }
 ];
 
 const additionalServices = [
@@ -59,31 +60,18 @@ export default function FiscalidadPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-green-500 to-blue-600 text-white mb-6">
+
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 text-white mb-6">
               <FileText className="h-10 w-10" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-green-800 to-blue-700 dark:from-white dark:via-green-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
-              Asesoría Fiscal
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-800 to-blue-700 dark:from-white dark:via-purple-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
+              Asesoría Fiscal</h1>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed text-justify">
               Cumplimiento tributario eficaz y optimización fiscal dentro de la legalidad vigente.
             </p>
           </motion.div>
 
-          {/* Alert for Tax Updates */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto mb-12"
-          >
-            <Alert className="border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-900/20 flex items-center gap-3">
-              <AlertCircle className="h-4 w-4 text-orange-600" />
-              <span>
-                <strong>Actualización Fiscal 2024:</strong> Nuevas deducciones disponibles para empresas que inviertan en digitalización y sostenibilidad. Consulte con nuestros expertos para aprovechar estas ventajas fiscales.
-              </span>
-            </Alert>
-          </motion.div>
+
 
           {/* Objectives Section */}
           <motion.div
@@ -106,7 +94,7 @@ export default function FiscalidadPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Cumplimiento Tributario</h3>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">
                         Dar cumplimiento eficaz a las exigencias que establece la Normativa Tributaria y Fiscal.
                       </p>
                     </div>
@@ -117,7 +105,7 @@ export default function FiscalidadPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 dark:text-white mb-2">Optimización Fiscal</h3>
-                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                      <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed text-justify">
                         Obtener las máximas ventajas fiscales dentro del cumplimiento de la legalidad vigente.
                       </p>
                     </div>
@@ -148,11 +136,11 @@ export default function FiscalidadPage() {
                       <div className="flex items-center space-x-3">
                         <Badge
                           variant="outline"
-                          className="bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800"
+                          className="bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800 text-justify"
                         >
                           Mod. {item.code}
                         </Badge>
-                        <span className="text-sm text-slate-700 dark:text-slate-300 font-medium">
+                        <span className="text-sm text-slate-700 dark:text-slate-300 font-mediu text-justify">
                           {item.desc}
                         </span>
                       </div>
@@ -189,7 +177,7 @@ export default function FiscalidadPage() {
                           </div>
                           <div>
                             <h3 className="font-semibold text-slate-900 dark:text-white mb-2">{service.title}</h3>
-                            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
                               {service.desc}
                             </p>
                           </div>
@@ -210,9 +198,10 @@ export default function FiscalidadPage() {
             className="text-center"
           >
             <Card className="bg-gradient-to-r from-green-600 to-blue-700 text-white border-0">
-              <CardContent>
-                <h2 className="text-3xl font-bold mb-4">Optimice su Carga Fiscal</h2>
-                <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Déjenos sus datos y su consulta y le agendaremos una cita.</p>
+              <CardContent className="p-12">
+                <FileText className="h-12 w-12 mx-auto mb-6 opacity-80" />
+                <h2 className="text-3xl font-bold mb-4">Reduce tu Carga Fiscal</h2>
+                <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Déjanos tus datos y tu consulta y te agendaremos una cita.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="https://wa.me/34657590436?text=Hola,%20quisiera%20solicitar%20una%20consulta%20con%20ASCE"
