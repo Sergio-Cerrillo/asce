@@ -41,16 +41,16 @@ export default function EmpresaPage() {
                             <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm border-0 shadow-2xl sticky top-24">
                                 <CardContent className="p-8">
                                     {/* Large Photo */}
-                                    <motion.div 
+                                    <motion.div
                                         className="relative mb-6 group"
                                         whileHover={{ scale: 1.02 }}
                                         transition={{ duration: 0.3 }}
                                     >
                                         <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-slate-600 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
                                         <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                                            <img 
-                                                src="/jose.png" 
-                                                alt="José A. Cerrillo Cantero" 
+                                            <img
+                                                src="/jose.png"
+                                                alt="José A. Cerrillo Cantero"
                                                 className="w-full h-full object-cover object-top"
                                             />
                                         </div>
